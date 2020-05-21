@@ -23,6 +23,7 @@ class PhoneValidator extends Validator {
 		} else {
 			this.isValid = false;
 			console.log('not a valid phone number');
+			event.target.classList.add('invalid');
 		}
 
 		super.validateAfter(event);

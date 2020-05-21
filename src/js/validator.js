@@ -56,6 +56,19 @@ class Validator {
 
 	validateAfter(event) {
 		console.log('Validator.validateAfter()');
+		// const $el = event.target;
+		// if (!this.isValid) {
+		// 	$el.classList.add('invalid');
+		// 	$el.parentElement.querySelector(
+		// 		'.error-message'
+		// 	).innerHTML = this.options.errorMessage;
+		// 	field.style.backgroundColor = 'red';
+		// } else {
+		// 	$el.classList.add('invalid');
+		// 	$el.parentElement.querySelector('').innerHTML =
+		// 		'this.options.errorMessage';
+		// 	field.style.backgroundColor = '';
+		// }
 	}
 
 	showErrors = () => {
