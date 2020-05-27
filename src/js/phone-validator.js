@@ -19,11 +19,9 @@ class PhoneValidator extends Validator {
 		if (/^\s*\(?\d{3}\)?[\-\. ]?\d{3}[\-\. ]?\d{4}$\s*$/.test(value)) {
 			console.log('valid phone number!');
 			this.isValid = true;
-			event.target.classList.remove('invalid');
 		} else {
 			this.isValid = false;
 			console.log('not a valid phone number');
-			event.target.classList.add('invalid');
 		}
 
 		super.validateAfter(event);

@@ -22,6 +22,8 @@ var Validator = /*#__PURE__*/function () {
 
     _defineProperty(this, "options", {});
 
+    _defineProperty(this, "field", document.querySelectorAll('input'));
+
     _defineProperty(this, "showErrors", function () {
       console.log('showing errors');
     });
@@ -74,19 +76,7 @@ var Validator = /*#__PURE__*/function () {
   }, {
     key: "validateAfter",
     value: function validateAfter(event) {
-      console.log('Validator.validateAfter()'); // const $el = event.target;
-      // if (!this.isValid) {
-      // 	$el.classList.add('invalid');
-      // 	$el.parentElement.querySelector(
-      // 		'.error-message'
-      // 	).innerHTML = this.options.errorMessage;
-      // 	field.style.backgroundColor = 'red';
-      // } else {
-      // 	$el.classList.add('invalid');
-      // 	$el.parentElement.querySelector('').innerHTML =
-      // 		'this.options.errorMessage';
-      // 	field.style.backgroundColor = '';
-      // }
+      console.log('Validator.validateAfter()');
     }
   }]);
 
