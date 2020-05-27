@@ -9,6 +9,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Validator = /*#__PURE__*/function () {
+  // field = document.querySelectorAll('input');
   function Validator(parameters) {
     var _this = this;
 
@@ -21,8 +22,6 @@ var Validator = /*#__PURE__*/function () {
     _defineProperty(this, "touched", false);
 
     _defineProperty(this, "options", {});
-
-    _defineProperty(this, "field", document.querySelectorAll('input'));
 
     _defineProperty(this, "showErrors", function () {
       console.log('showing errors');
@@ -76,7 +75,18 @@ var Validator = /*#__PURE__*/function () {
   }, {
     key: "validateAfter",
     value: function validateAfter(event) {
-      console.log('Validator.validateAfter()');
+      console.log('Validator.validateAfter() isValid?', this.isValid);
+      var $el = event.target;
+
+      if (!this.isValid) {
+        $el.classList.add('invalid');
+        $el.parentElement.querySelector('.error-message').innerHTML = this.options.errorMessage;
+        field.style.backgroundColor = 'red';
+      } else {
+        $el.classList.remove('invalid');
+        $el.parentElement.querySelector('.error-message').innerHTML = '';
+        field.style.backgroundColor = '';
+      }
     }
   }]);
 

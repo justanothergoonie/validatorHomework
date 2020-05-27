@@ -3,7 +3,7 @@ class Validator {
 	error = '';
 	touched = false;
 	options = {};
-	field = document.querySelectorAll('input');
+	// field = document.querySelectorAll('input');
 	constructor(parameters) {
 		console.log('Validator()', parameters);
 		this.options = Object.assign(
@@ -55,7 +55,19 @@ class Validator {
 	}
 
 	validateAfter(event) {
-		console.log('Validator.validateAfter()');
+		console.log('Validator.validateAfter() isValid?', this.isValid);
+		const $el = event.target;
+		if (!this.isValid) {
+			$el.classList.add('invalid');
+			$el.parentElement.querySelector(
+				'.error-message'
+			).innerHTML = this.options.errorMessage;
+			field.style.backgroundColor = 'red';
+		} else {
+			$el.classList.remove('invalid');
+			$el.parentElement.querySelector('.error-message').innerHTML = '';
+			field.style.backgroundColor = '';
+		}
 	}
 
 	showErrors = () => {

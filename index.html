@@ -21,7 +21,11 @@
 					</div>
 					<div class="field">
 						<label for="email">Email</label>
-						<input type="email" name="email" />
+						<input
+							type="email"
+							name="email"
+							data-validate-email="true"
+						/>
 						<span class="error-message"></span>
 					</div>
 					<div class="field">
@@ -48,6 +52,7 @@
 		</div>
 
 		<script src="dist/js/validator.js"></script>
+		<script src="dist/js/email-validator.js"></script>
 		<script src="dist/js/phone-validator.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>
