@@ -8,4 +8,7 @@ new PhoneValidator({
 new EmailValidator({
   selector: '[data-validate-email]'
 });
+new NameValidator({
+  selector: '[data-validate-name]'
+});
 //# sourceMappingURL=main.js.map

@@ -75,18 +75,18 @@ var Validator = /*#__PURE__*/function () {
   }, {
     key: "validateAfter",
     value: function validateAfter(event) {
-      console.log('Validator.validateAfter() isValid?', this.isValid);
-      var $el = event.target;
-
-      if (!this.isValid) {
-        $el.classList.add('invalid');
-        $el.parentElement.querySelector('.error-message').innerHTML = this.options.errorMessage;
-        field.style.backgroundColor = 'red';
-      } else {
-        $el.classList.remove('invalid');
-        $el.parentElement.querySelector('.error-message').innerHTML = '';
-        field.style.backgroundColor = '';
-      }
+      console.log('Validator.validateAfter() isValid?', this.isValid); // 	const $el = event.target;
+      // 	if (!this.isValid) {
+      // 		$el.classList.add('invalid');
+      // 		$el.parentElement.querySelector(
+      // 			'.error-message'
+      // 		).innerHTML = this.options.errorMessage;
+      // 		field.style.backgroundColor = 'red';
+      // 	} else {
+      // 		$el.classList.remove('invalid');
+      // 		$el.parentElement.querySelector('.error-message').innerHTML = '';
+      // 		field.style.backgroundColor = '';
+      // 	}
     }
   }]);
 
