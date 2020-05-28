@@ -221,7 +221,7 @@ body {
 }
 
 .field .invalid {
-	background-color: 0;
+	background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

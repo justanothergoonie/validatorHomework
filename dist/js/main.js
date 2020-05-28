@@ -12,6 +12,6 @@ new EmailValidator({
 });
 new NameValidator({
   selector: '[data-validate-name]',
-  errorMessage: 'your name is wrong idc What you say'
+  errorMessage: 'your name is wrong idc what you say'
 });
 //# sourceMappingURL=main.js.map
